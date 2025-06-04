@@ -1,0 +1,16 @@
+services:
+  # API Servisi
+  - type: web
+    name: firebase-auth-service
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -k uvicorn.workers.UvicornWorker api:app
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        sync: false # Render Dashboard üzerinden ayarlanmalı
+      - key: FIREBASE_CREDENTIALS_PATH
+        value: ./firebase-credentials.json
+      - key: WEBHOOK_SECRET 
+        sync: false # Render Dashboard üzerinden ayarlanmalı 

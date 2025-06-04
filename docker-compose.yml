@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  firebase-auth-service:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - ../api/firebase-credentials.json:/app/firebase-credentials.json
+    environment:
+      - DATABASE_URL=postgresql://postgres:Ke485866!@host.docker.internal:5432/postgres
+      - FIREBASE_CREDENTIALS_PATH=./firebase-credentials.json
+      - PORT=8000
+    restart: unless-stopped 
