@@ -3,7 +3,7 @@ const functions = require('firebase-functions');
 const fetch = require('node-fetch');
 
 // Render servis URL'nizi burada belirtin
-const SERVICE_URL = 'https://firebase-auth-service.onrender.com';
+const SERVICE_URL = 'https://apims.onrender.com';
 // Güvenli bir webhook anahtarı - Render'da aynı değeri kullanmalısınız
 const WEBHOOK_SECRET = 'sizin-gizli-webhook-anahtariniz';
 
