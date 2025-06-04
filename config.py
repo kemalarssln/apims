@@ -26,4 +26,4 @@ DATABASE_URL = os.getenv('DATABASE_URL', 'postgresql://postgres:Ke485866!@localh
 PORT = int(os.getenv('PORT', 10000))
 
 # Webhook güvenlik anahtarı
-WEBHOOK_SECRET = os.getenv('WEBHOOK_SECRET', 'your-webhook-secret-key')
+WEBHOOK_SECRET = os.getenv('WEBHOOK_SECRET', '2cb6a87af383942d453c924a76853cd2')
